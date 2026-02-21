@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot xmlns:xacro="http://wiki.ros.org/xacro" name="table">
+
+    <xacro:include filename="materials.xacro" />
+    <xacro:include filename="table_macro.xacro" />
+    <xacro:include filename="rrbot_macro.xacro" />
+
+    <link name="world" />
+
+    <xacro:table prefix="table1_" parent="world">
+        <origin xyz="0 0 0" rpy="0 0 0" />
+    </xacro:table>
+
+    <xacro:rrbot prefix="rrbot1_" parent="table1_top">
+        <origin xyz="0 0 0" rpy="0 0 0" />
+    </xacro:rrbot>
+
+    <xacro:table prefix="table2_" parent="world">
+        <origin xyz="3 0 0" rpy="0 0 0" />
+    </xacro:table>
+
+    <xacro:rrbot prefix="rrbot2_" parent="table2_top">
+        <origin xyz="0 0 0" rpy="0 0 0" />
+    </xacro:rrbot>
+
+    <xacro:table prefix="table3_" parent="world">
+        <origin xyz="6 0 0" rpy="0 0 0" />
+    </xacro:table>
+
+    <xacro:rrbot prefix="rrbot3_" parent="table3_top">
+        <origin xyz="-1 0 0" rpy="0 0 0" />
+    </xacro:rrbot>
+
+    <xacro:rrbot prefix="rrbot4_" parent="table3_top">
+        <origin xyz="1 0 0" rpy="0 0 0" />
+    </xacro:rrbot>
+
+</robot>
